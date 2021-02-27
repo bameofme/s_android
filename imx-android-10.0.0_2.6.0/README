@@ -1,0 +1,31 @@
+i.MX Android BSP Setup README
+
+To use this manifest repo, the 'repo' tool must be installed first.
+--------------------------------------------------------
+$: mkdir ~/bin
+$: curl https://storage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$: chmod a+x ~/bin/repo
+$: export PATH=${PATH}:~/bin
+
+Download and Setup Source:
+-----------------------------------------
+Run setup script to download Android open source and copy proprietary to source folders
+Run from above the folder for setup script to work properly
+
+$: source ./imx-android-10.0.0_2.6.0/imx_android_setup.sh
+
+Setup build environment:
+-------------------------
+- Set up the environment for building. This only configures the current terminal.
+$ source build/envsetup.sh
+
+- Execute the Android lunch command.
+lunch command can be issued with an argument or can be issued without the argument presenting a menu of selection.
+$ lunch mek_8q-userdebug
+
+Check Android User's Guide for more details
+
+- Execute the "imx-make.sh" script to generate the image.
+$ ./imx-make.sh -j4 2>&1 | tee build-log.txt
+The output of preceding command will be written to standard output and build-log.txt.
+If there is any errors when building the image, error log can be found in the build-log.txt file for checking.

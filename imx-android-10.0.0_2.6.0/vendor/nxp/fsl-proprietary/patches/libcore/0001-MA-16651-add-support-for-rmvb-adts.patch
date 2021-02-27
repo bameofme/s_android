@@ -1,0 +1,29 @@
+From 472b486707723afa8041352c6702ba8e13104935 Mon Sep 17 00:00:00 2001
+From: Xu Mao <mao.xu@nxp.com>
+Date: Tue, 10 Mar 2020 21:19:33 +0000
+Subject: [PATCH] MA-16651 add support for rmvb, adts
+
+Signed-off-by: Xu Mao <mao.xu@nxp.com>
+Change-Id: If1e7e296764d309eb26def05e9a49cfc601cbe12
+Reviewed-on: http://androidsource.ap.freescale.net/project/11651
+Reviewed-by: guoyin.chen <guoyin.chen@nxp.com>
+Reviewed-by: xiahong bao <xiahong.bao@nxp.com>
+---
+ luni/src/main/java/libcore/net/android.mime.types | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/luni/src/main/java/libcore/net/android.mime.types b/luni/src/main/java/libcore/net/android.mime.types
+index 6332489a41..fb2826f3da 100644
+--- a/luni/src/main/java/libcore/net/android.mime.types
++++ b/luni/src/main/java/libcore/net/android.mime.types
+@@ -97,3 +97,7 @@ video/mpeg mpeg!
+ video/quicktime mov!
+ video/vnd.youtube.yt yt
+ video/x-matroska mkv!
++
++# NXP added
++audio/aac adts
++audio/x-pn-realaudio rmvb
+-- 
+2.17.1
+
